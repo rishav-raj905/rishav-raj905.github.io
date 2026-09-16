@@ -35,6 +35,8 @@
     header {
       text-align: center;
       margin-bottom: 30px;
+      width: 100%;
+      max-width: 650px;
     }
 
     .profile-img {
@@ -72,7 +74,7 @@
       gap: 10px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .btn {
@@ -103,13 +105,13 @@
       margin-bottom: 15px;
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 8px;
+      margin-top: 30px;
     }
 
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 30px;
     }
 
     .skill-badge {
@@ -121,9 +123,29 @@
       color: var(--text-main);
     }
 
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px 10px 20px;
       color: var(--text-sub);
       font-size: 0.8rem;
       margin-top: auto;
@@ -135,32 +157,79 @@
   <header>
     <img src="IMG_20260911_220721.png" alt="Rishav Raj" class="profile-img">
     <h1>Rishav Raj 👋</h1>
-    <div class="subtitle">CSE (AI & Machine Learning) Student | Software Engineer</div>
-    <p class="bio">Passionate about building software solutions, intelligent systems, and web applications.</p>
+    <div class="subtitle">Diploma (CSE - AI & ML) Student | Galgotias University</div>
+    <p class="bio">Passionate about building software solutions, data analysis, and intelligent systems.</p>
     
     <div class="btn-group">
-      <a href="https://github.com/rishav-raj905" class="btn btn-primary" target="_blank">GitHub Profile</a>
-      <a href="mailto:rishavraaj358@gmail.com" class="btn btn-primary">✉️ Email Me</a>
-      <a href="https://www.linkedin.com/in/rishav-raj-781735307" class="btn btn-primary" target="_blank">LinkedIn</a>
-      <a href="#" class="btn btn-green">📄 View Resume</a>
+      <a href="https://github.com/rishav-raj905" class="btn btn-primary" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rishavraj-781735307" class="btn btn-primary" target="_blank">LinkedIn</a>
+      <a href="mailto:rishavraaj358@gmail.com" class="btn btn-primary">Email</a>
+      <a href="#" class="btn btn-green">Resume</a>
     </div>
   </header>
 
   <div class="container">
+    <!-- Technical Skills Section -->
     <div class="section-title">Technical Skills</div>
     <div class="skills-grid">
-      <span class="skill-badge">Python</span>
-      <span class="skill-badge">Java</span>
       <span class="skill-badge">C / C++</span>
-      <span class="skill-badge">HTML5 & CSS3</span>
-      <span class="skill-badge">AI / Machine Learning</span>
+      <span class="skill-badge">Java</span>
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">Pandas & NumPy</span>
+      <span class="skill-badge">OOP & DBMS</span>
       <span class="skill-badge">Git & GitHub</span>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section-title">Education</div>
+    <div class="card">
+      <h3>Diploma in Computer Science & Engineering (AI & Machine Learning)</h3>
+      <p>Galgotias University, Greater Noida | 3rd Year (5th Semester)[span_1](start_span)[span_1](end_span)</p>
+      <p style="margin-top: 5px;">Focusing on core programming, data structures, algorithms, and AI/ML foundations.</p>
+    </div>
+
+    <!-- Internship Experience -->
+    <div class="section-title">Experience & Training</div>
+    <div class="card">
+      <h3>AI/ML Intern (Virtual) — Sumerix Global</h3>
+      <p>Worked on Student Performance Data Exploration and Exploratory Data Analysis (EDA) using Python, Pandas, NumPy, Matplotlib, and Seaborn[span_2](start_span)[span_2](end_span).</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section-title">Projects</div>
+    <div class="card">
+      <h3>Attendance Management System</h3>
+      <p>Built using <b>Java</b> to automate student attendance tracking, utilizing Object-Oriented Programming principles and structured logic[span_3](start_span)[span_3](end_span).</p>
+    </div>
+    <div class="card">
+      <h3>Digital Clock</h3>
+      <p>Developed using <b>C Language</b> with real-time update logic, formatting, and modular code design[span_4](start_span)[span_4](end_span).</p>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section-title">Certifications & Workshops</div>
+    <div class="card">
+      <h3>Oracle Certified Foundations Associate: Agentic AI</h3>
+      <p>Oracle University[span_5](start_span)[span_5](end_span)</p>
+    </div>
+    <div class="card">
+      <h3>Bajaj Manufacturing Systems (BMS) Certification</h3>
+      <p>Bajaj Auto Ltd.[span_6](start_span)[span_6](end_span)</p>
+    </div>
+    <div class="card">
+      <h3>Artificial Intelligence & Machine Learning (AI/ML)</h3>
+      <p>Sumerix Global[span_7](start_span)[span_7](end_span)</p>
+    </div>
+    <div class="card">
+      <h3>1-Day Workshop on Machine Learning & AI</h3>
+      <p>AppWars Technologies[span_8](start_span)[span_8](end_span)</p>
     </div>
   </div>
 
   <footer>
-    &copy; Rishav Raj. Built with GitHub Pages.
+    &copy; 2026 Rishav Raj. Built with GitHub Pages.
   </footer>
 
 </body>
-</html>
+  </html>
+  
