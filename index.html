@@ -3,24 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishav Raj | Software Engineer</title>
+    <title>Rishav Raj | AI/ML & Software Engineer</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0d1117; color: #c9d1d9; text-align: center; padding: 60px 20px; }
-        h1 { color: #58a6ff; font-size: 2.5rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; color: #8b949e; }
-        .card { background: #161b22; border: 1px solid #30363d; padding: 30px; border-radius: 12px; display: inline-block; margin-top: 30px; max-width: 500px; }
-        .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #238636; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold; }
-        .btn:hover { background: #2ea043; }
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text-main: #c9d1d9;
+            --text-sub: #8b949e;
+            --accent: #58a6ff;
+            --btn-green: #238636;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 { font-size: 2.2rem; color: #ffffff; margin-bottom: 5px; }
+        .subtitle { font-size: 1.1rem; color: var(--accent); font-weight: 500; }
+        .bio { max-width: 600px; margin: 15px auto; color: var(--text-sub); font-size: 0.95rem; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #ffffff;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .skill-badge {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .project-card, .edu-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3, .edu-card h3 { color: var(--accent); margin-top: 0; font-size: 1.1rem; }
+        .project-card p, .edu-card p { font-size: 0.85rem; color: var(--text-sub); margin: 5px 0; }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .btn-primary { background-color: var(--btn-green); color: #ffffff; }
+        .btn-secondary { background-color: var(--card-bg); color: var(--accent); border: 1px solid var(--border); }
+
+        footer { text-align: center; padding: 20px; border-top: 1px solid var(--border); color: var(--text-sub); font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <h1>Hi, I'm Rishav Raj 👋</h1>
-    <p>CSE (AI/ML) Student | Aspiring Software Engineer</p>
-    
-    <div class="card">
-        <h3>🚀 Welcome to My Portfolio</h3>
-        <p>I am passionate about software engineering, web development, and AI/ML technologies.</p>
-        <a class="btn" href="https://github.com/rishav-raj905">View GitHub Profile</a>
+
+    <header>
+        <h1>Rishav Raj 👋</h1>
+        <div class="subtitle">CSE (AI & Machine Learning) Student | Software Engineer</div>
+        <p class="bio">Passionate about building software solutions, intelligent systems, and web applications.</p>
+        
+        <div class="btn-group">
+            <a href="https://github.com/rishav-raj905" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+            <a href="mailto:your-email@gmail.com" class="btn btn-secondary">📧 Email Me</a>
+            <a href="https://linkedin.com/in/your-linkedin-id" target="_blank" class="btn btn-secondary">💼 LinkedIn</a>
+            <a href="#" target="_blank" class="btn btn-primary">📄 View Resume</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Technical Skills -->
+        <span class="section-title">Technical Skills</span>
+        <div class="skills-grid">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">C / C++</span>
+            <span class="skill-badge">HTML5 & CSS3</span>
+            <span class="skill-badge">AI / Machine Learning</span>
+            <span class="skill-badge">Git & GitHub</span>
+        </div>
+
+        <!-- Education -->
+        <span class="section-title">Education</span>
+        <div class="edu-card">
+            <h3>B.Tech in Computer Science Engineering (AI & ML)</h3>
+            <p><strong>Status:</strong> Pursuing Graduation</p>
+        </div>
+
+        <!-- Featured Projects -->
+        <span class="section-title">Featured Projects</span>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Digital Stopwatch in C</h3>
+                <p>Console-based digital stopwatch designed in C language to track time intervals.</p>
+                <a href="https://github.com/rishav-raj905/digital-stopwatch-c" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Attendance System</h3>
+                <p>Java-based system designed to manage and process attendance records efficiently.</p>
+                <a href="https://github.com/rishav-raj905" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        <p>© 2026 Rishav Raj. Hosted on GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
