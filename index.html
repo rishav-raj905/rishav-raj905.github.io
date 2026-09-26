@@ -1,9 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rishav Raj | Portfolio</title>
+
+  <meta name="description" content="Rishav Raj | Diploma CSE AI/ML student at Galgotias University. Explore my skills, projects, AI/ML internship and certifications.">
+
+  <title>Rishav Raj | AI/ML Portfolio</title>
+
   <style>
     :root {
       --bg-color: #0d1117;
@@ -19,39 +24,36 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: var(--bg-color);
+      background: var(--bg-color);
       color: var(--text-main);
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
       min-height: 100vh;
+      line-height: 1.6;
     }
+
+    /* Header */
 
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       width: 100%;
-      max-width: 650px;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent-color);
-      display: block;
-      margin: 0 auto 20px auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      max-width: 750px;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
       color: #ffffff;
     }
@@ -59,54 +61,96 @@
     .subtitle {
       color: var(--accent-color);
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .bio {
       color: var(--text-sub);
-      max-width: 500px;
-      margin: 0 auto 20px auto;
-      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto 25px;
+      line-height: 1.7;
     }
+
+    /* Buttons */
 
     .btn-group {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
 
     .btn {
-      padding: 10px 18px;
-      border-radius: 6px;
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 0.9rem;
       color: white;
-      transition: opacity 0.2s;
+      border: 1px solid var(--border-color);
+      transition: 0.2s ease;
     }
 
     .btn:hover {
       opacity: 0.85;
+      transform: translateY(-2px);
     }
 
-    .btn-primary { background-color: #21262d; border: 1px solid var(--border-color); }
-    .btn-green { background-color: var(--btn-green); }
+    .btn-primary {
+      background: #21262d;
+    }
+
+    .btn-green {
+      background: var(--btn-green);
+      border-color: var(--btn-green);
+    }
+
+    /* Main Container */
 
     .container {
       width: 100%;
-      max-width: 650px;
+      max-width: 750px;
     }
 
     .section-title {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: #ffffff;
-      margin-bottom: 15px;
+      margin: 35px 0 18px;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 8px;
-      margin-top: 30px;
+      padding-bottom: 10px;
     }
+
+    /* Cards */
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 18px;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent-color);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-sub);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    /* Skills */
 
     .skills-grid {
       display: flex;
@@ -115,121 +159,516 @@
     }
 
     .skill-badge {
-      background-color: var(--card-bg);
+      background: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-size: 0.88rem;
       color: var(--text-main);
     }
 
-    .card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 15px;
+    /* Internship */
+
+    .internship-label {
+      display: inline-block;
+      background: rgba(35, 134, 54, 0.15);
+      color: #3fb950;
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
     }
 
-    .card h3 {
-      font-size: 1rem;
-      color: #ffffff;
+    .internship-date {
+      color: var(--accent-color) !important;
+      font-size: 0.85rem !important;
+    }
+
+    /* Task Cards */
+
+    .task-card {
+      background: #0d1117;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .task-number {
+      display: inline-block;
+      color: var(--accent-color);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .task-card h3 {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .task-subtitle {
+      color: #c9d1d9 !important;
+      font-weight: 600;
+      margin-bottom: 12px !important;
+    }
+
+    .task-list {
+      padding-left: 22px;
+      margin: 12px 0 16px;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .task-list li {
       margin-bottom: 5px;
     }
 
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-sub);
-      line-height: 1.4;
+    /* Technology Tags */
+
+    .task-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
     }
+
+    .task-tags span {
+      background: #161b22;
+      border: 1px solid var(--border-color);
+      color: var(--accent-color);
+      padding: 5px 11px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+    }
+
+    /* Footer */
 
     footer {
       text-align: center;
-      padding: 30px 20px 10px 20px;
+      padding: 35px 15px 10px;
       color: var(--text-sub);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       margin-top: auto;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    /* Mobile Responsive */
+
+    @media (max-width: 600px) {
+      body {
+        padding: 25px 15px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+
+      .card {
+        padding: 17px;
+      }
+
+      .task-card {
+        padding: 15px;
+      }
+
+      .btn {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
+  <!-- ================= HEADER ================= -->
+
   <header>
-    <a href="Rishav_Raj_Resume.pdf" class="btn" target="_blank">
+
     <h1>Rishav Raj 👋</h1>
-    <div class="subtitle">Diploma (CSE - AI & ML) Student | Galgotias University</div>
-    <p class="bio">Passionate about building software solutions, data analysis, and intelligent systems.</p>
-    
+
+    <div class="subtitle">
+      Diploma CSE (AI &amp; ML) Student
+      | Galgotias University
+    </div>
+
+    <p class="bio">
+      Passionate about programming, Artificial Intelligence,
+      Machine Learning, and building practical software solutions.
+      Currently exploring data analysis and machine learning
+      through academic projects and internship tasks.
+    </p>
+
+    <!-- Social Links and Resume -->
+
     <div class="btn-group">
-      <a href="https://github.com/rishav-raj905" class="btn btn-primary" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/rishavraj-781735307" class="btn btn-primary" target="_blank">LinkedIn</a>
-      <a href="mailto:rishavraaj358@gmail.com" class="btn btn-primary">Email</a>
-      <a href="Rishav_Raj_Resume-1.pdf" class="btn btn-green" target="_blank">Resume</a>
+
+      <a
+        href="https://github.com/rishav-raj905"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a
+        href="https://linkedin.com/in/rishav-raj-781735307"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a
+        href="mailto:rishavraaj358@gmail.com"
+        class="btn btn-primary">
+        Email
+      </a>
+
+      <!-- NEW RESUME PDF -->
+
+      <a
+        href="Rishav_Raj_Resume.pdf"
+        class="btn btn-green"
+        target="_blank"
+        rel="noopener noreferrer">
+        Download Resume
+      </a>
+
     </div>
   </header>
 
-  <div class="container">
-    <!-- Technical Skills Section -->
-    <div class="section-title">Technical Skills</div>
-    <div class="skills-grid">
-      <span class="skill-badge">C / C++</span>
-      <span class="skill-badge">Java</span>
-      <span class="skill-badge">Python</span>
-      <span class="skill-badge">Pandas & NumPy</span>
-      <span class="skill-badge">OOP & DBMS</span>
-      <span class="skill-badge">Git & GitHub</span>
-    </div>
+  <main class="container">
 
-    <!-- Education Section -->
-    <div class="section-title">Education</div>
-    <div class="card">
-      <h3>Diploma in Computer Science & Engineering (AI & Machine Learning)</h3>
-      <p>Galgotias University, Greater Noida | 3rd Year (5th Semester)</p>
-      <p style="margin-top: 5px;">Focusing on core programming, data structures, algorithms, and AI/ML foundations.</p>
-    </div>
+    <!-- ================= SKILLS ================= -->
 
-    <!-- Internship Experience -->
-    <div class="section-title">Experience & Training</div>
-    <div class="card">
-      <h3>AI/ML Intern (Virtual) — Sumerix Global</h3>
-      <p>Worked on Student Performance Data Exploration and Exploratory Data Analysis (EDA) using Python, Pandas, NumPy, Matplotlib, and Seaborn.</p>
-    </div>
+    <section id="skills">
 
-    <!-- Projects Section -->
-    <div class="section-title">Projects</div>
-    <div class="card">
-      <h3>Attendance Management System</h3>
-      <p>Built using <b>Java</b> to automate student attendance tracking, utilizing Object-Oriented Programming principles and structured logic.</p>
-    </div>
-    <div class="card">
-      <h3>Digital Clock</h3>
-      <p>Developed using <b>C Language</b> with real-time update logic, formatting, and modular code design.</p>
-    </div>
+      <h2 class="section-title">Technical Skills</h2>
 
-    <!-- Certifications Section -->
-    <div class="section-title">Certifications & Workshops</div>
-    <div class="card">
-      <h3>Oracle Certified Foundations Associate: Agentic AI</h3>
-      <p>Oracle University</p>
-    </div>
-    <div class="card">
-      <h3>Bajaj Manufacturing Systems (BMS) Certification</h3>
-      <p>Bajaj Auto Ltd.</p>
-    </div>
-    <div class="card">
-      <h3>Artificial Intelligence & Machine Learning (AI/ML)</h3>
-      <p>Sumerix Global</p>
-    </div>
-    <div class="card">
-      <h3>1-Day Workshop on Machine Learning & AI</h3>
-      <p>AppWars Technologies</p>
-    </div>
-  </div>
+      <div class="skills-grid">
+        <span class="skill-badge">C / C++</span>
+        <span class="skill-badge">Java</span>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Pandas</span>
+        <span class="skill-badge">NumPy</span>
+        <span class="skill-badge">Matplotlib</span>
+        <span class="skill-badge">Seaborn</span>
+        <span class="skill-badge">Scikit-learn</span>
+        <span class="skill-badge">OOP</span>
+        <span class="skill-badge">DBMS</span>
+        <span class="skill-badge">MySQL</span>
+        <span class="skill-badge">Git &amp; GitHub</span>
+      </div>
+
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+      <h2 class="section-title">Education</h2>
+
+      <div class="card">
+
+        <h3>
+          Diploma in Computer Science &amp; Engineering
+          (AI &amp; Machine Learning)
+        </h3>
+
+        <p>
+          Galgotias University, Greater Noida
+        </p>
+
+        <p>
+          2024 – 2027 | 5th Semester
+        </p>
+
+        <p>
+          Focus areas: Programming, Data Structures,
+          Database Management Systems, and AI/ML foundations.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+      <h2 class="section-title">Experience &amp; Training</h2>
+
+      <div class="card">
+
+        <span class="internship-label">
+          VIRTUAL INTERNSHIP
+        </span>
+
+        <h3>AI/ML Intern — Sumerix Global</h3>
+
+        <p class="internship-date">
+          2026 | Artificial Intelligence &amp; Machine Learning
+        </p>
+
+        <p>
+          Working on practical AI/ML tasks involving
+          exploratory data analysis, data preprocessing,
+          feature engineering, and machine learning
+          pipeline development using Python.
+        </p>
+
+        <!-- ========== TASK 1 ========== -->
+
+        <div class="task-card">
+
+          <span class="task-number">TASK 01</span>
+
+          <h3>Student Performance Data Explorer</h3>
+
+          <p class="task-subtitle">
+            Exploratory Data Analysis (EDA)
+          </p>
+
+          <p>
+            Explored the Student Performance dataset to
+            understand data patterns, distributions, and
+            relationships between different variables.
+          </p>
+
+          <ul class="task-list">
+
+            <li>
+              Loaded, inspected, and explored the dataset
+              using Pandas.
+            </li>
+
+            <li>
+              Cleaned data and handled duplicate records.
+            </li>
+
+            <li>
+              Performed statistical and correlation analysis.
+            </li>
+
+            <li>
+              Created histograms, scatter plots, box plots,
+              and heatmaps for data visualization.
+            </li>
+
+          </ul>
+
+          <div class="task-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Matplotlib</span>
+            <span>Seaborn</span>
+            <span>EDA</span>
+          </div>
+
+        </div>
+
+        <!-- ========== TASK 2 ========== -->
+
+        <div class="task-card">
+
+          <span class="task-number">TASK 02</span>
+
+          <h3>
+            Data Preprocessing, Feature Engineering
+            &amp; Machine Learning Pipeline Development
+          </h3>
+
+          <p class="task-subtitle">
+            Employee Attrition Dataset
+          </p>
+
+          <p>
+            Focused on preparing the Employee Attrition
+            dataset for predictive modeling by learning
+            data preprocessing, feature transformation,
+            and machine learning pipeline techniques.
+          </p>
+
+          <ul class="task-list">
+
+            <li>
+              Understanding structured datasets and
+              identifying data quality issues.
+            </li>
+
+            <li>
+              Handling missing values and duplicate records.
+            </li>
+
+            <li>
+              Encoding categorical variables using
+              Label Encoding and One-Hot Encoding.
+            </li>
+
+            <li>
+              Scaling and normalizing numerical features.
+            </li>
+
+            <li>
+              Detecting and handling outliers and
+              engineering meaningful features.
+            </li>
+
+            <li>
+              Performing train-test splitting and
+              learning reusable preprocessing pipelines
+              using Scikit-learn.
+            </li>
+
+          </ul>
+
+          <div class="task-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Scikit-learn</span>
+            <span>Data Preprocessing</span>
+            <span>Feature Engineering</span>
+            <span>ML Pipelines</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+      <h2 class="section-title">Projects</h2>
+
+      <div class="card">
+
+        <h3>Attendance Management System</h3>
+
+        <p>
+          Developed an attendance management system
+          using Java to record, update, and manage
+          student attendance with object-oriented
+          programming and structured logic.
+        </p>
+
+        <div class="task-tags">
+          <span>Java</span>
+          <span>OOP</span>
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Digital Clock</h3>
+
+        <p>
+          Developed a digital clock application in C
+          with time logic, formatting, and real-time
+          display of hours, minutes, and seconds.
+        </p>
+
+        <div class="task-tags">
+          <span>C Programming</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <section id="certifications">
+
+      <h2 class="section-title">
+        Certifications &amp; Workshops
+      </h2>
+
+      <div class="card">
+
+        <h3>
+          Oracle Certified Foundations Associate:
+          Agentic AI
+        </h3>
+
+        <p>Oracle University | 2026</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          Bajaj Manufacturing Systems (BMS) Certification
+        </h3>
+
+        <p>Bajaj Auto Ltd. | 2026</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          Artificial Intelligence &amp; Machine Learning
+        </h3>
+
+        <p>Sumerix Global | 2026</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          1-Day Workshop on Machine Learning &amp; AI
+        </h3>
+
+        <p>AppWars Technologies</p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
 
   <footer>
-    &copy; 2026 Rishav Raj. Built with GitHub Pages.
+
+    <p>
+      &copy; 2026 Rishav Raj.
+      Built with HTML, CSS &amp; GitHub Pages.
+    </p>
+
+    <p>
+      <a href="mailto:rishavraaj358@gmail.com">
+        Contact Me
+      </a>
+    </p>
+
   </footer>
 
 </body>
   </html>
+  
+
   
