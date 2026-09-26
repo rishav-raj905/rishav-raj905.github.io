@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Rishav Raj - Diploma CSE AI/ML student at Galgotias University. Explore my skills, projects, AI/ML internship and certifications.">
-
-  <meta name="theme-color" content="#0d1117">
+  <meta name="description" content="Rishav Raj - Diploma CSE AI/ML student at Galgotias University. Explore my skills, projects and AI/ML internship.">
 
   <title>Rishav Raj | AI/ML Portfolio</title>
 
@@ -18,7 +15,7 @@
       --border: #30363d;
       --text: #c9d1d9;
       --muted: #8b949e;
-      --accent: #58a6ff;
+      --blue: #58a6ff;
       --green: #238636;
     }
 
@@ -26,8 +23,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     html {
@@ -38,53 +34,75 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      padding: 35px 20px;
-      min-height: 100vh;
     }
 
     a {
       color: inherit;
     }
 
-    /* HEADER */
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(13,17,23,0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    /* HERO SECTION */
 
     header {
-      max-width: 850px;
-      margin: 0 auto 75px;
       text-align: center;
-      padding: 20px 0;
+      padding: 65px 20px 75px;
+      max-width: 850px;
+      margin: auto;
     }
 
     .profile-img {
-      width: 155px;
-      height: 155px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center top;
-      border: 4px solid var(--accent);
+      object-position: center 25%;
+      border: 4px solid var(--blue);
       display: block;
       margin: 0 auto 25px;
-      box-shadow: 0 0 25px rgba(88,166,255,0.15);
+      box-shadow: 0 0 30px rgba(88,166,255,0.15);
+      background: var(--card);
     }
 
     h1 {
+      color: white;
       font-size: clamp(2rem, 6vw, 3.2rem);
-      color: #fff;
-      line-height: 1.2;
+      line-height: 1.3;
       margin-bottom: 15px;
     }
 
     .subtitle {
-      color: var(--accent);
-      font-size: 1.1rem;
-      font-weight: 600;
+      color: var(--blue);
+      font-size: 1.15rem;
+      font-weight: bold;
       margin-bottom: 20px;
     }
 
     .bio {
-      color: var(--muted);
-      max-width: 650px;
+      max-width: 680px;
       margin: 0 auto 30px;
+      color: var(--muted);
       font-size: 1.05rem;
     }
 
@@ -95,23 +113,24 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
+      margin-top: 25px;
     }
 
     .btn {
       display: inline-block;
       padding: 12px 22px;
-      background: #21262d;
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 9px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
+      border: 1px solid var(--border);
+      background: #21262d;
       color: white;
-      transition: 0.2s ease;
+      transition: 0.2s;
     }
 
     .btn:hover {
-      border-color: var(--accent);
       transform: translateY(-3px);
+      border-color: var(--blue);
     }
 
     .btn-green {
@@ -122,43 +141,46 @@
     /* MAIN CONTENT */
 
     main {
-      width: 100%;
-      max-width: 850px;
+      max-width: 900px;
+      width: 90%;
       margin: auto;
     }
 
+    section {
+      margin-bottom: 55px;
+      scroll-margin-top: 75px;
+    }
+
     .section-title {
-      color: #fff;
-      font-size: 1.65rem;
-      margin: 45px 0 20px;
-      padding-bottom: 12px;
+      color: white;
+      font-size: 1.8rem;
       border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 25px;
     }
 
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 24px;
+      padding: 25px;
       margin-bottom: 20px;
-      transition: border-color 0.2s;
+      transition: 0.2s;
     }
 
     .card:hover {
-      border-color: var(--accent);
+      border-color: var(--blue);
     }
 
     .card h3 {
-      color: #fff;
-      font-size: 1.15rem;
+      color: white;
+      font-size: 1.2rem;
       margin-bottom: 10px;
-      line-height: 1.5;
     }
 
     .card p {
       color: var(--muted);
-      margin-bottom: 8px;
-      font-size: 0.96rem;
+      margin-bottom: 10px;
     }
 
     /* SKILLS */
@@ -169,147 +191,133 @@
       gap: 12px;
     }
 
-    .skill-badge {
+    .skill {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 25px;
-      padding: 9px 17px;
-      font-size: 0.9rem;
+      border-radius: 30px;
+      padding: 9px 18px;
+      color: var(--text);
+      font-size: 0.95rem;
     }
 
-    /* INTERNSHIP */
+    /* INTERNSHIP TASKS */
 
-    .internship-label {
+    .label {
       display: inline-block;
-      color: #3fb950;
       background: rgba(35,134,54,0.15);
-      border: 1px solid rgba(63,185,80,0.3);
-      border-radius: 25px;
+      color: #3fb950;
+      border: 1px solid #238636;
+      border-radius: 20px;
       padding: 5px 13px;
-      font-size: 0.75rem;
+      font-size: 12px;
       font-weight: bold;
-      letter-spacing: 1px;
       margin-bottom: 15px;
     }
 
-    .internship-date {
-      color: var(--accent) !important;
-      font-size: 0.88rem !important;
-    }
-
-    /* TASKS */
-
-    .task-card {
+    .task {
       background: var(--bg);
       border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
-      border-radius: 12px;
+      border-left: 4px solid var(--blue);
+      border-radius: 10px;
       padding: 22px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
     .task-number {
-      display: inline-block;
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
+      color: var(--blue);
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 1px;
     }
 
-    .task-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 8px;
+    .task h3 {
+      margin: 10px 0;
     }
 
-    .task-subtitle {
-      color: #c9d1d9 !important;
-      font-weight: 600;
-    }
-
-    .task-list {
+    .task ul {
       padding-left: 22px;
+      color: var(--muted);
       margin: 15px 0;
-      font-size: 0.93rem;
-      color: var(--text);
     }
 
-    .task-list li {
+    .task li {
       margin-bottom: 8px;
     }
 
-    .task-tags {
+    .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 18px;
+      margin-top: 15px;
     }
 
-    .task-tags span {
+    .tags span {
       background: var(--card);
       border: 1px solid var(--border);
-      color: var(--accent);
+      color: var(--blue);
       padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 13px;
+    }
+
+    .status {
+      color: #3fb950 !important;
+      font-size: 14px;
+      font-weight: bold;
     }
 
     /* FOOTER */
 
     footer {
-      max-width: 850px;
-      margin: 60px auto 0;
-      padding: 25px 10px;
       border-top: 1px solid var(--border);
+      padding: 30px 15px;
       text-align: center;
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 14px;
     }
 
     footer a {
-      color: var(--accent);
+      color: var(--blue);
       text-decoration: none;
     }
 
-    /* MOBILE RESPONSIVE */
-
     @media (max-width: 600px) {
-      body {
-        padding: 20px 15px;
-      }
-
       header {
-        margin-bottom: 50px;
+        padding: 40px 18px 55px;
       }
 
       .profile-img {
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
       }
 
       .subtitle {
-        font-size: 0.95rem;
+        font-size: 1rem;
       }
 
       .bio {
         font-size: 0.95rem;
       }
 
+      main {
+        width: 92%;
+      }
+
       .section-title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
 
       .card {
         padding: 18px;
       }
 
-      .task-card {
+      .task {
         padding: 16px;
       }
 
-      .btn {
-        padding: 11px 16px;
-        font-size: 0.85rem;
+      nav a {
+        margin: 0 6px;
+        font-size: 12px;
       }
     }
   </style>
@@ -317,62 +325,67 @@
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- NAVIGATION -->
+
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Internship</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certificates</a>
+  </nav>
+
+  <!-- HERO -->
 
   <header>
 
-    <!-- PROFILE PHOTO -->
     <img
-      src="IMG_20260911_20721.png"
+      src="./IMG_20260911_220721.png"
       alt="Rishav Raj profile photo"
       class="profile-img"
-      width="155"
-      height="155"
+      width="180"
+      height="180"
+      onerror="this.style.display='none';"
     >
 
     <h1>Rishav Raj 👋</h1>
 
     <div class="subtitle">
-      Diploma CSE (AI &amp; ML) Student
-      | Galgotias University
+      Diploma CSE (AI &amp; ML) Student |
+      Galgotias University
     </div>
 
     <p class="bio">
       Passionate about programming, Artificial Intelligence,
-      Machine Learning, and building practical software solutions.
-      Currently exploring data analysis and machine learning
-      through academic projects and internship tasks.
+      Machine Learning, and building practical software
+      solutions. Currently exploring data analysis and
+      machine learning through academic projects and
+      internship tasks.
     </p>
 
     <div class="btn-group">
 
-      <a
-        href="https://github.com/rishav-raj905"
-        class="btn"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a href="https://github.com/rishav-raj905"
+         class="btn" target="_blank"
+         rel="noopener noreferrer">
         GitHub
       </a>
 
-      <a
-        href="https://www.linkedin.com/in/rishav-raj-781735307"
-        class="btn"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/rishav-raj-781735307"
+         class="btn" target="_blank"
+         rel="noopener noreferrer">
         LinkedIn
       </a>
 
-      <a
-        href="mailto:rishavraaj358@gmail.com"
-        class="btn">
+      <a href="mailto:rishavraaj358@gmail.com"
+         class="btn">
         Email
       </a>
 
-      <a
-        href="Rishav_Raj_Resume.pdf"
-        class="btn btn-green"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a href="./Rishav_Raj_Resume.pdf"
+         class="btn btn-green"
+         target="_blank"
+         rel="noopener noreferrer">
         Download Resume
       </a>
 
@@ -381,121 +394,89 @@
 
   <main>
 
-    <!-- ================= SKILLS ================= -->
+    <!-- SKILLS -->
 
     <section id="skills">
-
       <h2 class="section-title">Technical Skills</h2>
 
       <div class="skills-grid">
-        <span class="skill-badge">C / C++</span>
-        <span class="skill-badge">Java</span>
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">Pandas</span>
-        <span class="skill-badge">NumPy</span>
-        <span class="skill-badge">Matplotlib</span>
-        <span class="skill-badge">Seaborn</span>
-        <span class="skill-badge">Scikit-learn</span>
-        <span class="skill-badge">OOP</span>
-        <span class="skill-badge">DBMS</span>
-        <span class="skill-badge">MySQL</span>
-        <span class="skill-badge">Git &amp; GitHub</span>
-        <span class="skill-badge">HTML &amp; CSS</span>
+        <span class="skill">C / C++</span>
+        <span class="skill">Java</span>
+        <span class="skill">Python</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">Matplotlib</span>
+        <span class="skill">Seaborn</span>
+        <span class="skill">Scikit-learn</span>
+        <span class="skill">OOP</span>
+        <span class="skill">DBMS</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">Git &amp; GitHub</span>
+        <span class="skill">HTML &amp; CSS</span>
       </div>
-
     </section>
 
-    <!-- ================= EDUCATION ================= -->
+    <!-- EDUCATION -->
 
     <section id="education">
-
       <h2 class="section-title">Education</h2>
 
       <div class="card">
-
-        <h3>
-          Diploma in Computer Science &amp; Engineering
-          (AI &amp; Machine Learning)
-        </h3>
-
+        <h3>Diploma in Computer Science &amp; Engineering (AI &amp; Machine Learning)</h3>
         <p>Galgotias University, Greater Noida</p>
-
         <p>2024 – 2027 | 5th Semester</p>
-
         <p>
           Focus areas: Programming, Data Structures,
           Database Management Systems, and AI/ML foundations.
         </p>
-
       </div>
-
     </section>
 
-    <!-- ================= EXPERIENCE ================= -->
+    <!-- INTERNSHIP -->
 
     <section id="experience">
-
       <h2 class="section-title">Experience &amp; Training</h2>
 
       <div class="card">
 
-        <span class="internship-label">
-          VIRTUAL INTERNSHIP
-        </span>
+        <span class="label">VIRTUAL INTERNSHIP</span>
 
         <h3>AI/ML Intern — Sumerix Global</h3>
 
-        <p class="internship-date">
-          2026 | Artificial Intelligence &amp; Machine Learning
+        <p>
+          Artificial Intelligence &amp; Machine Learning
+          | 2026
         </p>
 
         <p>
-          Completing practical AI/ML tasks involving
-          exploratory data analysis, data preprocessing,
-          feature engineering, and machine learning
-          pipeline development using Python.
+          Completed practical AI/ML tasks involving
+          exploratory data analysis and data preparation
+          using Python and machine learning libraries.
         </p>
 
         <!-- TASK 1 -->
 
-        <div class="task-card">
-
+        <div class="task">
           <span class="task-number">TASK 01</span>
 
           <h3>Student Performance Data Explorer</h3>
 
-          <p class="task-subtitle">
-            Exploratory Data Analysis (EDA)
-          </p>
+          <p><strong>Exploratory Data Analysis (EDA)</strong></p>
 
           <p>
             Explored the Student Performance dataset to
             understand data patterns, distributions, and
-            relationships between different variables.
+            relationships between variables.
           </p>
 
-          <ul class="task-list">
-            <li>
-              Loaded, inspected, and explored the dataset
-              using Pandas.
-            </li>
-            <li>
-              Cleaned data and handled duplicate records.
-            </li>
-            <li>
-              Performed statistical and correlation analysis.
-            </li>
-            <li>
-              Created histograms, scatter plots, box plots,
-              and heatmaps for data visualization.
-            </li>
-            <li>
-              Documented the project and maintained code
-              using Git and GitHub.
-            </li>
+          <ul>
+            <li>Loaded and explored data using Pandas.</li>
+            <li>Cleaned data and handled duplicate records.</li>
+            <li>Performed statistical and correlation analysis.</li>
+            <li>Created histograms, scatter plots, box plots, and heatmaps.</li>
           </ul>
 
-          <div class="task-tags">
+          <div class="tags">
             <span>Python</span>
             <span>Pandas</span>
             <span>NumPy</span>
@@ -504,22 +485,19 @@
             <span>EDA</span>
           </div>
 
-          <div class="task-tags">
-            <a
-              class="btn"
-              href="https://github.com/rishav-raj905/AI_ML_TASK1_EDA"
-              target="_blank"
-              rel="noopener noreferrer">
+          <div class="btn-group">
+            <a class="btn"
+               href="https://github.com/rishav-raj905/AI_ML_TASK1_EDA"
+               target="_blank"
+               rel="noopener noreferrer">
               View Task 1 on GitHub
             </a>
           </div>
-
         </div>
 
         <!-- TASK 2 -->
 
-        <div class="task-card">
-
+        <div class="task">
           <span class="task-number">TASK 02</span>
 
           <h3>
@@ -527,166 +505,110 @@
             &amp; Machine Learning Pipeline Development
           </h3>
 
-          <p class="task-subtitle">
-            Employee Attrition Dataset
-          </p>
+          <p><strong>Employee Attrition Dataset</strong></p>
 
           <p>
-            Working on preparing the Employee Attrition
+            Focused on preparing the Employee Attrition
             dataset for predictive modeling by learning
             data preprocessing, feature transformation,
-            and machine learning pipeline techniques.
+            and reusable machine learning pipeline techniques.
           </p>
 
-          <ul class="task-list">
-
-            <li>
-              Understanding structured datasets and
-              identifying data quality issues.
-            </li>
-
-            <li>
-              Handling missing values and duplicate records.
-            </li>
-
-            <li>
-              Encoding categorical variables using
-              Label Encoding and One-Hot Encoding.
-            </li>
-
-            <li>
-              Scaling and normalizing numerical features.
-            </li>
-
-            <li>
-              Detecting and handling outliers and
-              engineering meaningful features.
-            </li>
-
-            <li>
-              Performing train-test splitting and
-              learning reusable preprocessing pipelines
-              using Scikit-learn.
-            </li>
-
+          <ul>
+            <li>Understanding structured datasets and identifying data quality issues.</li>
+            <li>Handling missing values and duplicate records.</li>
+            <li>Encoding categorical variables using Label Encoding and One-Hot Encoding.</li>
+            <li>Scaling and normalizing numerical features.</li>
+            <li>Detecting outliers and engineering meaningful features.</li>
+            <li>Performing train-test splitting and building preprocessing pipelines using Scikit-learn.</li>
           </ul>
 
-          <div class="task-tags">
+          <div class="tags">
             <span>Python</span>
             <span>Pandas</span>
             <span>NumPy</span>
             <span>Scikit-learn</span>
-            <span>Data Preprocessing</span>
             <span>Feature Engineering</span>
             <span>ML Pipelines</span>
           </div>
 
+          <p class="status">
+            Task 2 | Data Preprocessing &amp; ML Pipeline
+          </p>
         </div>
 
       </div>
-
     </section>
 
-    <!-- ================= PROJECTS ================= -->
+    <!-- PROJECTS -->
 
     <section id="projects">
-
       <h2 class="section-title">Projects</h2>
 
       <div class="card">
-
         <h3>Attendance Management System</h3>
-
         <p>
-          Developed an attendance management system
-          using Java to record, update, and manage
-          student attendance with object-oriented
+          Developed a Java application to record and
+          manage student attendance using object-oriented
           programming and structured logic.
         </p>
-
-        <div class="task-tags">
+        <div class="tags">
           <span>Java</span>
           <span>OOP</span>
         </div>
-
       </div>
 
       <div class="card">
-
         <h3>Digital Clock</h3>
-
         <p>
           Developed a digital clock application in C
-          with time logic, formatting, and real-time
-          display of hours, minutes, and seconds.
+          with time logic, formatting, and display
+          of hours, minutes, and seconds.
         </p>
-
-        <div class="task-tags">
+        <div class="tags">
           <span>C Programming</span>
         </div>
-
       </div>
-
     </section>
 
-    <!-- ================= CERTIFICATIONS ================= -->
+    <!-- CERTIFICATIONS -->
 
     <section id="certifications">
-
-      <h2 class="section-title">
-        Certifications &amp; Workshops
-      </h2>
+      <h2 class="section-title">Certifications &amp; Workshops</h2>
 
       <div class="card">
-        <h3>
-          Oracle Certified Foundations Associate:
-          Agentic AI
-        </h3>
+        <h3>Oracle Certified Foundations Associate: Agentic AI</h3>
         <p>Oracle University</p>
       </div>
 
       <div class="card">
-        <h3>
-          Bajaj Manufacturing Systems (BMS) Certification
-        </h3>
+        <h3>Bajaj Manufacturing Systems (BMS) Certification</h3>
         <p>Bajaj Auto Ltd.</p>
       </div>
 
       <div class="card">
-        <h3>
-          Artificial Intelligence &amp; Machine Learning
-        </h3>
+        <h3>Artificial Intelligence &amp; Machine Learning</h3>
         <p>Sumerix Global</p>
       </div>
 
       <div class="card">
-        <h3>
-          1-Day Workshop on Machine Learning &amp; AI
-        </h3>
+        <h3>1-Day Workshop on Machine Learning &amp; AI</h3>
         <p>AppWars Technologies</p>
       </div>
-
     </section>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
 
   <footer>
-
+    <p>© 2026 Rishav Raj | Built with HTML, CSS &amp; GitHub Pages</p>
     <p>
-      &copy; 2026 Rishav Raj.
-      Built with HTML, CSS &amp; GitHub Pages.
+      <a href="mailto:rishavraaj358@gmail.com">Contact Me</a>
     </p>
-
-    <p>
-      <a href="mailto:rishavraaj358@gmail.com">
-        Contact Me
-      </a>
-    </p>
-
   </footer>
 
 </body>
   </html>
+                                           
           
