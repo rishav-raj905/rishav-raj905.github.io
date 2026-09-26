@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Rishav Raj | Diploma CSE AI/ML student at Galgotias University. Explore my skills, projects, AI/ML internship and certifications.">
+  <meta name="description" content="Rishav Raj - Diploma CSE AI/ML student at Galgotias University. Explore my skills, projects, AI/ML internship and certifications.">
+
+  <meta name="theme-color" content="#0d1117">
 
   <title>Rishav Raj | AI/ML Portfolio</title>
 
   <style>
     :root {
-      --bg-color: #0d1117;
-      --card-bg: #161b22;
-      --border-color: #30363d;
-      --text-main: #c9d1d9;
-      --text-sub: #8b949e;
-      --accent-color: #58a6ff;
-      --btn-green: #238636;
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #238636;
     }
 
     * {
@@ -33,261 +35,280 @@
     }
 
     body {
-      background: var(--bg-color);
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 35px 20px;
       min-height: 100vh;
-      line-height: 1.6;
     }
 
-    /* Header */
+    a {
+      color: inherit;
+    }
+
+    /* HEADER */
 
     header {
+      max-width: 850px;
+      margin: 0 auto 75px;
       text-align: center;
-      margin-bottom: 35px;
-      width: 100%;
-      max-width: 750px;
+      padding: 20px 0;
+    }
+
+    .profile-img {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--accent);
+      display: block;
+      margin: 0 auto 25px;
+      box-shadow: 0 0 25px rgba(88,166,255,0.15);
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #ffffff;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 15px;
     }
 
     .subtitle {
-      color: var(--accent-color);
+      color: var(--accent);
+      font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
 
     .bio {
-      color: var(--text-sub);
-      max-width: 600px;
-      margin: 0 auto 25px;
-      line-height: 1.7;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 1.05rem;
     }
 
-    /* Buttons */
+    /* BUTTONS */
 
     .btn-group {
       display: flex;
-      gap: 12px;
-      justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      justify-content: center;
+      gap: 12px;
     }
 
     .btn {
       display: inline-block;
-      padding: 11px 20px;
-      border-radius: 8px;
+      padding: 12px 22px;
+      background: #21262d;
+      border: 1px solid var(--border);
+      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
       color: white;
-      border: 1px solid var(--border-color);
       transition: 0.2s ease;
     }
 
     .btn:hover {
-      opacity: 0.85;
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: #21262d;
+      border-color: var(--accent);
+      transform: translateY(-3px);
     }
 
     .btn-green {
-      background: var(--btn-green);
-      border-color: var(--btn-green);
+      background: var(--green);
+      border-color: var(--green);
     }
 
-    /* Main Container */
+    /* MAIN CONTENT */
 
-    .container {
+    main {
       width: 100%;
-      max-width: 750px;
+      max-width: 850px;
+      margin: auto;
     }
 
     .section-title {
-      font-size: 1.5rem;
-      color: #ffffff;
-      margin: 35px 0 18px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 10px;
+      color: #fff;
+      font-size: 1.65rem;
+      margin: 45px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
     }
 
-    /* Cards */
-
     .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 22px;
-      margin-bottom: 18px;
-      transition: border-color 0.2s ease;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
     }
 
     .card:hover {
-      border-color: var(--accent-color);
+      border-color: var(--accent);
     }
 
     .card h3 {
+      color: #fff;
       font-size: 1.15rem;
-      color: #ffffff;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      line-height: 1.5;
     }
 
     .card p {
-      font-size: 0.95rem;
-      color: var(--text-sub);
-      line-height: 1.7;
+      color: var(--muted);
       margin-bottom: 8px;
+      font-size: 0.96rem;
     }
 
-    /* Skills */
+    /* SKILLS */
 
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .skill-badge {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 8px 15px;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 25px;
-      font-size: 0.88rem;
-      color: var(--text-main);
+      padding: 9px 17px;
+      font-size: 0.9rem;
     }
 
-    /* Internship */
+    /* INTERNSHIP */
 
     .internship-label {
       display: inline-block;
-      background: rgba(35, 134, 54, 0.15);
       color: #3fb950;
-      border: 1px solid rgba(63, 185, 80, 0.3);
-      padding: 5px 12px;
-      border-radius: 20px;
+      background: rgba(35,134,54,0.15);
+      border: 1px solid rgba(63,185,80,0.3);
+      border-radius: 25px;
+      padding: 5px 13px;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 1px;
-      margin-bottom: 14px;
+      margin-bottom: 15px;
     }
 
     .internship-date {
-      color: var(--accent-color) !important;
-      font-size: 0.85rem !important;
+      color: var(--accent) !important;
+      font-size: 0.88rem !important;
     }
 
-    /* Task Cards */
+    /* TASKS */
 
     .task-card {
-      background: #0d1117;
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--accent-color);
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 22px;
+      margin-top: 22px;
     }
 
     .task-number {
       display: inline-block;
-      color: var(--accent-color);
-      font-size: 0.78rem;
+      color: var(--accent);
+      font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       margin-bottom: 10px;
     }
 
     .task-card h3 {
-      font-size: 1.1rem;
-      line-height: 1.5;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
     }
 
     .task-subtitle {
       color: #c9d1d9 !important;
       font-weight: 600;
-      margin-bottom: 12px !important;
     }
 
     .task-list {
       padding-left: 22px;
-      margin: 12px 0 16px;
-      color: var(--text-main);
-      font-size: 0.9rem;
-      line-height: 1.8;
+      margin: 15px 0;
+      font-size: 0.93rem;
+      color: var(--text);
     }
 
     .task-list li {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
-
-    /* Technology Tags */
 
     .task-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 15px;
+      margin-top: 18px;
     }
 
     .task-tags span {
-      background: #161b22;
-      border: 1px solid var(--border-color);
-      color: var(--accent-color);
-      padding: 5px 11px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
     }
 
-    /* Footer */
+    /* FOOTER */
 
     footer {
+      max-width: 850px;
+      margin: 60px auto 0;
+      padding: 25px 10px;
+      border-top: 1px solid var(--border);
       text-align: center;
-      padding: 35px 15px 10px;
-      color: var(--text-sub);
-      font-size: 0.85rem;
-      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.88rem;
     }
 
     footer a {
-      color: var(--accent-color);
+      color: var(--accent);
       text-decoration: none;
     }
 
-    /* Mobile Responsive */
+    /* MOBILE RESPONSIVE */
 
     @media (max-width: 600px) {
       body {
-        padding: 25px 15px;
+        padding: 20px 15px;
       }
 
-      h1 {
-        font-size: 2rem;
+      header {
+        margin-bottom: 50px;
+      }
+
+      .profile-img {
+        width: 130px;
+        height: 130px;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+      }
+
+      .bio {
+        font-size: 0.95rem;
       }
 
       .section-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
 
       .card {
-        padding: 17px;
+        padding: 18px;
       }
 
       .task-card {
-        padding: 15px;
+        padding: 16px;
       }
 
       .btn {
-        padding: 10px 14px;
+        padding: 11px 16px;
         font-size: 0.85rem;
       }
     }
@@ -299,6 +320,15 @@
   <!-- ================= HEADER ================= -->
 
   <header>
+
+    <!-- PROFILE PHOTO -->
+    <img
+      src="IMG_20260911_20721.png"
+      alt="Rishav Raj profile photo"
+      class="profile-img"
+      width="155"
+      height="155"
+    >
 
     <h1>Rishav Raj 👋</h1>
 
@@ -314,21 +344,19 @@
       through academic projects and internship tasks.
     </p>
 
-    <!-- Social Links and Resume -->
-
     <div class="btn-group">
 
       <a
         href="https://github.com/rishav-raj905"
-        class="btn btn-primary"
+        class="btn"
         target="_blank"
         rel="noopener noreferrer">
         GitHub
       </a>
 
       <a
-        href="https://linkedin.com/in/rishav-raj-781735307"
-        class="btn btn-primary"
+        href="https://www.linkedin.com/in/rishav-raj-781735307"
+        class="btn"
         target="_blank"
         rel="noopener noreferrer">
         LinkedIn
@@ -336,11 +364,9 @@
 
       <a
         href="mailto:rishavraaj358@gmail.com"
-        class="btn btn-primary">
+        class="btn">
         Email
       </a>
-
-      <!-- NEW RESUME PDF -->
 
       <a
         href="Rishav_Raj_Resume.pdf"
@@ -353,7 +379,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main>
 
     <!-- ================= SKILLS ================= -->
 
@@ -374,6 +400,7 @@
         <span class="skill-badge">DBMS</span>
         <span class="skill-badge">MySQL</span>
         <span class="skill-badge">Git &amp; GitHub</span>
+        <span class="skill-badge">HTML &amp; CSS</span>
       </div>
 
     </section>
@@ -391,13 +418,9 @@
           (AI &amp; Machine Learning)
         </h3>
 
-        <p>
-          Galgotias University, Greater Noida
-        </p>
+        <p>Galgotias University, Greater Noida</p>
 
-        <p>
-          2024 – 2027 | 5th Semester
-        </p>
+        <p>2024 – 2027 | 5th Semester</p>
 
         <p>
           Focus areas: Programming, Data Structures,
@@ -427,13 +450,13 @@
         </p>
 
         <p>
-          Working on practical AI/ML tasks involving
+          Completing practical AI/ML tasks involving
           exploratory data analysis, data preprocessing,
           feature engineering, and machine learning
           pipeline development using Python.
         </p>
 
-        <!-- ========== TASK 1 ========== -->
+        <!-- TASK 1 -->
 
         <div class="task-card">
 
@@ -452,25 +475,24 @@
           </p>
 
           <ul class="task-list">
-
             <li>
               Loaded, inspected, and explored the dataset
               using Pandas.
             </li>
-
             <li>
               Cleaned data and handled duplicate records.
             </li>
-
             <li>
               Performed statistical and correlation analysis.
             </li>
-
             <li>
               Created histograms, scatter plots, box plots,
               and heatmaps for data visualization.
             </li>
-
+            <li>
+              Documented the project and maintained code
+              using Git and GitHub.
+            </li>
           </ul>
 
           <div class="task-tags">
@@ -482,9 +504,19 @@
             <span>EDA</span>
           </div>
 
+          <div class="task-tags">
+            <a
+              class="btn"
+              href="https://github.com/rishav-raj905/AI_ML_TASK1_EDA"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Task 1 on GitHub
+            </a>
+          </div>
+
         </div>
 
-        <!-- ========== TASK 2 ========== -->
+        <!-- TASK 2 -->
 
         <div class="task-card">
 
@@ -500,7 +532,7 @@
           </p>
 
           <p>
-            Focused on preparing the Employee Attrition
+            Working on preparing the Employee Attrition
             dataset for predictive modeling by learning
             data preprocessing, feature transformation,
             and machine learning pipeline techniques.
@@ -606,44 +638,32 @@
       </h2>
 
       <div class="card">
-
         <h3>
           Oracle Certified Foundations Associate:
           Agentic AI
         </h3>
-
-        <p>Oracle University | 2026</p>
-
+        <p>Oracle University</p>
       </div>
 
       <div class="card">
-
         <h3>
           Bajaj Manufacturing Systems (BMS) Certification
         </h3>
-
-        <p>Bajaj Auto Ltd. | 2026</p>
-
+        <p>Bajaj Auto Ltd.</p>
       </div>
 
       <div class="card">
-
         <h3>
           Artificial Intelligence &amp; Machine Learning
         </h3>
-
-        <p>Sumerix Global | 2026</p>
-
+        <p>Sumerix Global</p>
       </div>
 
       <div class="card">
-
         <h3>
           1-Day Workshop on Machine Learning &amp; AI
         </h3>
-
         <p>AppWars Technologies</p>
-
       </div>
 
     </section>
@@ -669,6 +689,4 @@
 
 </body>
   </html>
-  
-
-  
+          
